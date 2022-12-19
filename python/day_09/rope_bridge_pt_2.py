@@ -8,7 +8,7 @@ def drawPositions():
             charToPrint = " . "
             for piece in ropePieces:
                 if piece.position["x"] == j and piece.position["y"] == i:
-                    charToPrint = piece.name
+                    charToPrint = " " + piece.name + " "
                     break
             s += charToPrint
         print(s)
@@ -89,7 +89,7 @@ class Head:
         for _ in range(1, amount + 1):
             moveInDirection[direction]()
             self.alignTail()
-           # drawPositions()
+            drawPositions()
 
         
 ropeTails = [Tail(str(i)) for i in range(1, 9 + 1)]
